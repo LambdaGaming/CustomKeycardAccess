@@ -1,5 +1,4 @@
-﻿using Exiled.API.Enums;
-using Exiled.API.Features;
+﻿using Exiled.API.Features;
 using events = Exiled.Events.Handlers;
 
 namespace CustomKeycardAccess
@@ -12,12 +11,14 @@ namespace CustomKeycardAccess
 		{
 			base.OnEnabled();
 			EventHandlers = new EventHandlers( this );
+			events.Player.InteractingDoor += EventHandlers.OnDoorInteract;
 			Log.Info( "Successfully loaded." );
 		}
 
 		public override void OnDisabled()
 		{
 			base.OnDisabled();
+			events.Player.InteractingDoor -= EventHandlers.OnDoorInteract;
 			EventHandlers = null;
 		}
 	}
