@@ -3,7 +3,7 @@
 
 # Notes:
 - See your EXILED config for the keycard options. (Make sure you run the server at least once with the plugin so the configs generate.)
-- By default, the Facility Guard gains access to the intercom, and the MTF Commander gains access to the surface nuke room. Below is a list of available keycard and door names.
+- By default, the Facility Guard gains access to the intercom. Below is a list of available keycard and door names.
 
 ## Doors
 
