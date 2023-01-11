@@ -1,5 +1,5 @@
 ﻿using Exiled.API.Features;
-using Exiled.Events.EventArgs;
+using Exiled.Events.EventArgs.Player;
 using Interactables.Interobjects.DoorUtils;
 using System;
 using System.Collections.Generic;
