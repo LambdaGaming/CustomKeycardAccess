@@ -14,7 +14,7 @@ namespace CustomKeycardAccess
 
 		public void OnDoorInteract( InteractingDoorEventArgs ev )
 		{
-			if ( ev.Door.RequiredPermissions.RequiredPermissions != KeycardPermissions.None )
+			if ( ev.Door.RequiredPermissions.RequiredPermissions != KeycardPermissions.None && !ev.Player.IsScp )
 			{
 				foreach ( KeyValuePair<string, string> kv in plugin.Config.AllowList )
 				{
