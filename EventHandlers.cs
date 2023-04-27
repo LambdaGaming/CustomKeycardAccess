@@ -16,14 +16,17 @@ namespace CustomKeycardAccess
 		{
 			if ( ev.Door.RequiredPermissions.RequiredPermissions != KeycardPermissions.None && !ev.Player.IsScp )
 			{
-				foreach ( KeyValuePair<string, string> kv in plugin.Config.AllowList )
+				foreach ( KeyValuePair<string, string[]> kv in plugin.Config.AllowList )
 				{
-					Door door = Door.Get( kv.Value );
-					ItemType keycard = ( ItemType ) Enum.Parse( typeof( ItemType ), kv.Key );
-					if ( door == ev.Door && keycard == ev.Player.CurrentItem.Type )
+					foreach ( string d in kv.Value )
 					{
-						ev.IsAllowed = true;
-						break;
+						Door door = Door.Get( d );
+						ItemType keycard = ( ItemType ) Enum.Parse( typeof( ItemType ), kv.Key );
+						if ( door == ev.Door && keycard == ev.Player.CurrentItem.Type )
+						{
+							ev.IsAllowed = true;
+							break;
+						}
 					}
 				}
 			}
