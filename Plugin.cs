@@ -7,15 +7,15 @@ namespace CustomKeycardAccess
 	public class Plugin : Plugin<Config>
 	{
 		private EventHandlers EventHandlers;
-		public override Version Version { get; } = new Version( 1, 2, 1 );
+		public override Version Version { get; } = new Version( 1, 2, 2 );
 		public override Version RequiredExiledVersion { get; } = new Version( 8, 0, 0 );
+		public override string Author { get; } = "OPGman";
 
 		public override void OnEnabled()
 		{
 			base.OnEnabled();
 			EventHandlers = new EventHandlers( this );
 			events.Player.InteractingDoor += EventHandlers.OnDoorInteract;
-			Log.Info( "Successfully loaded." );
 		}
 
 		public override void OnDisabled()
