@@ -37,7 +37,7 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="Exiled.API">
-      <HintPath>\\server-pc\EXILED\Plugins\dependencies\Exiled.API.dll</HintPath>
+      <HintPath>\\server-pc\SCPSL\PluginAPI\plugins\global\dependencies\Exiled.API.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Exiled.Events">
@@ -52,6 +52,9 @@
     </Reference>
     <Reference Include="UnityEngine.CoreModule">
       <HintPath>\\server-pc\Servers\lambda_scp\SCPSL_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule">
+      <HintPath>\\server-pc\Servers\lambda_scp\SCPSL_Data\Managed\UnityEngine.PhysicsModule.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

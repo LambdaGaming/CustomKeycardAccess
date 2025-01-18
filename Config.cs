@@ -14,7 +14,7 @@ namespace CustomKeycardAccess
 
 		[Description( "List of keycards and the doors that they should open. Needs to be in the following format: KEYCARDNAME: - DOORNAME. Each door name needs to be on a separate line." )]
 		public Dictionary<string, string[]> AllowList { get; set; } = new Dictionary<string, string[]> {
-			{ "KeycardGuard", new string[] { "INTERCOM", "NUKE_ARMORY" } },
+			{ "KeycardGuard", new string[] { "INTERCOM" } },
 		};
 	}
 }
