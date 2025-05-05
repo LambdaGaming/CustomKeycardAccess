@@ -30,12 +30,6 @@ namespace CustomKeycardAccess
 					}
 				}
 			}
-#if DEBUG
-			foreach ( KeyValuePair<string, DoorNametagExtension> kv in DoorNametagExtension.NamedDoors )
-			{
-				Log.Info( kv.Key );
-			}
-#endif
 		}
 	}
 }
