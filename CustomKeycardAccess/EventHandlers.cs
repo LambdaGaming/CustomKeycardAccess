@@ -1,6 +1,7 @@
-﻿using Exiled.API.Features.Doors;
+﻿using Exiled.API.Enums;
+using Exiled.API.Features.Doors;
 using Exiled.Events.EventArgs.Player;
-using Interactables.Interobjects.DoorUtils;
+using DoorUtils = Interactables.Interobjects.DoorUtils;
 using System;
 using System.Collections.Generic;
 
@@ -14,14 +15,15 @@ namespace CustomKeycardAccess
 
 		public void OnDoorInteract( InteractingDoorEventArgs ev )
 		{
-			if ( ev.Door.RequiredPermissions.RequiredPermissions != KeycardPermissions.None && !ev.Player.IsScp )
+			if ( ev.Door.RequiredPermissions.RequiredPermissions != DoorUtils.KeycardPermissions.None && ev.Player.CurrentItem != null && ev.Player.CurrentItem.IsKeycard )
 			{
 				foreach ( KeyValuePair<string, string[]> kv in plugin.Config.AllowList )
 				{
 					foreach ( string d in kv.Value )
 					{
-						Door door = Door.Get( d );
+						DoorType doorType = ( DoorType ) Enum.Parse( typeof( DoorType ), d );
 						ItemType keycard = ( ItemType ) Enum.Parse( typeof( ItemType ), kv.Key );
+						Door door = Door.Get( doorType );
 						if ( door == ev.Door && keycard == ev.Player.CurrentItem.Type )
 						{
 							ev.IsAllowed = true;
