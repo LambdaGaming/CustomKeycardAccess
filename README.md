@@ -32,8 +32,7 @@ HczArmory
 HeavyContainmentDoor
 HeavyBulkDoor
 HIDChamber
-HIDUpper
-HIDLower
+HIDLab
 Intercom
 LczArmory
 LczCafe
@@ -59,6 +58,11 @@ CheckpointArmoryB
 Airlock
 Scp173NewGate
 EscapeFinal
+Scp106Checkpoint
+ServerRoomCloset
+TestRoom
+PlantsCloset
+Checkpoint
 
 ## Keycards
 ID |
