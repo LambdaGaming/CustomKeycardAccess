@@ -83,3 +83,6 @@ KeycardCustomManagement
 KeycardCustomMetalCase
 KeycardCustomSite02
 KeycardCustomTaskForce
+
+# Contributing
+ Contributions are welcome! Please read through the [guidelines](https://lambdagaming.github.io/guides/contributing) before submitting an issue or pull request.
